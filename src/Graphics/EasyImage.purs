@@ -1,10 +1,19 @@
 module Graphics.EasyImage where
 
-import Prelude (Unit())
-import Control.Monad.Aff (Aff())
+import Prelude (Unit)
+import Control.Monad.Aff (Aff)
 
 foreign import data EASY_IMAGE :: !
 
-foreign import cropInPlace :: forall e.
-                              Int -> Int -> Int -> Int ->
-                              String -> Aff (easyImage :: EASY_IMAGE|e) Unit
+type Bounds =
+  { x :: Int
+  , y :: Int
+  , width :: Int
+  , height :: Int
+  }
+
+foreign import cropInPlace
+  :: forall eff
+   . Bounds
+  -> String
+  -> Aff (easyImage :: EASY_IMAGE | eff) Unit

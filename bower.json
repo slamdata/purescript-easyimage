@@ -1,15 +1,24 @@
 {
   "name": "purescript-easyimage",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/slamdata/purescript-easyimage"
-  },
   "homepage": "https://github.com/slamdata/purescript-easyimage",
+  "license": "Apache-2.0",
   "authors": [
     "Maxim Zimaliev <zimaliev@gmail.com>"
   ],
-  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/slamdata/purescript-easyimage.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
   "dependencies": {
-    "purescript-aff": "^0.16.0"
+    "purescript-aff": "^1.1.0"
   }
 }
